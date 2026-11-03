@@ -28,17 +28,21 @@ section{padding:clamp(72px,9vw,128px) 0;background:var(--bg);color:var(--ink)}
 .white{background:var(--surface)}
 .dark{background:var(--bg);color:var(--ink)}
 /* nav */
-.nav{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.72);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);color:var(--ink)}
+.nav{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.85);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);color:var(--ink)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
 .logo{white-space:nowrap;font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.04em;display:inline-flex;align-items:center;gap:10px}
 .logo::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--signal);box-shadow:0 0 14px rgba(var(--glow),.8)}
 .nav ul{display:flex;gap:28px;list-style:none;align-items:center;font-weight:500;font-size:14px}
 .nav ul a:not(.btn){color:var(--ink2);transition:color .15s}
 .nav ul a:not(.btn):hover{color:var(--ink)}
-.lang,.lang-g .lang{display:inline-flex;gap:6px;align-items:center;font-size:13px;font-weight:500;color:var(--ink2);list-style:none}
-.lang span{opacity:.4}
-.lang a{color:var(--ink2)}
-.lang a[aria-current]{color:var(--ink)!important}
+.lang{list-style:none}
+.seg{position:relative;display:inline-flex;align-items:center;padding:3px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:12px;font-weight:600;letter-spacing:.04em;isolation:isolate}
+.seg svg{color:var(--ink2);margin:0 4px 0 7px}
+.seg a{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;width:36px;height:26px;border-radius:999px;color:var(--ink2)!important;transition:color .25s}
+.seg a:hover{color:var(--ink)!important}
+.seg a[aria-current]{color:#0b0b0c!important}
+.seg i{position:absolute;z-index:0;top:3px;left:28px;width:36px;height:26px;border-radius:999px;background:#fafafa;box-shadow:0 1px 8px rgba(0,0,0,.4);transition:transform .35s cubic-bezier(.3,.8,.3,1)}
+.seg.pl i{transform:translateX(36px)}
 .lang-g{list-style:none}
 @media(max-width:760px){.nav ul li:not(:last-child):not(.lang){display:none}.nav ul{gap:14px}.nav ul li:last-child{display:none}}
 /* buttons */
