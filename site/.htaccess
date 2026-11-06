@@ -7,6 +7,9 @@ RewriteRule ^ https://marcinbednarz.pl%{REQUEST_URI} [L,R=301]
 ErrorDocument 404 /index.html
 
 <IfModule mod_headers.c>
+  <FilesMatch "\.(pdf|webp|jpg|png)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
   Header always set Strict-Transport-Security "max-age=31536000"
   Header always set X-Content-Type-Options "nosniff"
 </IfModule>
