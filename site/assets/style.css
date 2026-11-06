@@ -41,8 +41,7 @@ p .ulink{font-weight:inherit}
 /* nav */
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(1.6);-webkit-backdrop-filter:blur(16px) saturate(1.6);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
-.logo{white-space:nowrap;font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.04em;display:inline-flex;align-items:center;gap:9px}
-.logo::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--acc);box-shadow:0 0 0 4px rgba(var(--glow),.14)}
+.logo{white-space:nowrap;font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.04em;display:inline-flex;align-items:center}
 .nav ul{display:flex;gap:28px;list-style:none;align-items:center;font-weight:500;font-size:14px}
 .nav ul a:not(.btn){position:relative;color:var(--sub);transition:color .2s}
 .nav ul a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
